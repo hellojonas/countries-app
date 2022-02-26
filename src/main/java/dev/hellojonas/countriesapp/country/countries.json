@@ -1,0 +1,536 @@
+[
+  {
+    "name": "Cocos (Keeling) Islands",
+    "capital": "West Island",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 550,
+    "area": 14
+  },
+  {
+    "name": "Colombia",
+    "capital": "Bogotá",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 50882884,
+    "area": 1141748
+  },
+  {
+    "name": "Comoros",
+    "capital": "Moroni",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 869595,
+    "area": 1862
+  },
+  {
+    "name": "Congo",
+    "capital": "Brazzaville",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 5518092,
+    "area": 342000
+  },
+  {
+    "name": "Congo (Democratic Republic of the)",
+    "capital": "Kinshasa",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 89561404,
+    "area": 2344858
+  },
+  {
+    "name": "Cook Islands",
+    "capital": "Avarua",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 18100,
+    "area": 236
+  },
+  {
+    "name": "Costa Rica",
+    "capital": "San José",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 5094114,
+    "area": 51100
+  },
+  {
+    "name": "Croatia",
+    "capital": "Zagreb",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 4047200,
+    "area": 56594
+  },
+  {
+    "name": "Cuba",
+    "capital": "Havana",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 11326616,
+    "area": 109884
+  },
+  {
+    "name": "Curaçao",
+    "capital": "Willemstad",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 155014,
+    "area": 444
+  },
+  {
+    "name": "Cyprus",
+    "capital": "Nicosia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 1207361,
+    "area": 9251
+  },
+  {
+    "name": "Czech Republic",
+    "capital": "Prague",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 10698896,
+    "area": 78865
+  },
+  {
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 5831404,
+    "area": 43094
+  },
+  {
+    "name": "Djibouti",
+    "capital": "Djibouti",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 988002,
+    "area": 23200
+  },
+  {
+    "name": "Dominica",
+    "capital": "Roseau",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 71991,
+    "area": 751
+  },
+  {
+    "name": "Dominican Republic",
+    "capital": "Santo Domingo",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 10847904,
+    "area": 48671
+  },
+  {
+    "name": "Ecuador",
+    "capital": "Quito",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 17643060,
+    "area": 276841
+  },
+  {
+    "name": "Egypt",
+    "capital": "Cairo",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 102334403,
+    "area": 1002450
+  },
+  {
+    "name": "El Salvador",
+    "capital": "San Salvador",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 6486201,
+    "area": 21041
+  },
+  {
+    "name": "Equatorial Guinea",
+    "capital": "Malabo",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 1402985,
+    "area": 28051
+  },
+  {
+    "name": "Eritrea",
+    "capital": "Asmara",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 5352000,
+    "area": 117600
+  },
+  {
+    "name": "Estonia",
+    "capital": "Tallinn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 1331057,
+    "area": 45227
+  },
+  {
+    "name": "Ethiopia",
+    "capital": "Addis Ababa",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 114963583,
+    "area": 1104300
+  },
+  {
+    "name": "Falkland Islands (Malvinas)",
+    "capital": "Stanley",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 2563,
+    "area": 12173
+  },
+  {
+    "name": "Faroe Islands",
+    "capital": "Tórshavn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 48865,
+    "area": 1393
+  },
+  {
+    "name": "Fiji",
+    "capital": "Suva",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 896444,
+    "area": 18272
+  },
+  {
+    "name": "Finland",
+    "capital": "Helsinki",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 5530719,
+    "area": 338424
+  },
+  {
+    "name": "France",
+    "capital": "Paris",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 67391582,
+    "area": 640679
+  },
+  {
+    "name": "French Guiana",
+    "capital": "Cayenne",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 254541
+  },
+  {
+    "name": "French Polynesia",
+    "capital": "Papeetē",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 280904,
+    "area": 4167
+  },
+  {
+    "name": "French Southern Territories",
+    "capital": "Port-aux-Français",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 140,
+    "area": 7747
+  },
+  {
+    "name": "Gabon",
+    "capital": "Libreville",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 2225728,
+    "area": 267668
+  },
+  {
+    "name": "Gambia",
+    "capital": "Banjul",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 2416664,
+    "area": 11295
+  },
+  {
+    "name": "Georgia",
+    "capital": "Tbilisi",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 3714000,
+    "area": 69700
+  },
+  {
+    "name": "Germany",
+    "capital": "Berlin",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 83240525,
+    "area": 357114
+  },
+  {
+    "name": "Ghana",
+    "capital": "Accra",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 31072945,
+    "area": 238533
+  },
+  {
+    "name": "Gibraltar",
+    "capital": "Gibraltar",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 33691,
+    "area": 6
+  },
+  {
+    "name": "Greece",
+    "capital": "Athens",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 10715549,
+    "area": 131990
+  },
+  {
+    "name": "Greenland",
+    "capital": "Nuuk",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "population": 56367,
+    "area": 2166086
+  },
+  {
+    "name": "Grenada",
+    "capital": "St. George's",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 112519,
+    "area": 344
+  },
+  {
+    "name": "Guadeloupe",
+    "capital": "Basse-Terre",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 400132
+  },
+  {
+    "name": "Guam",
+    "capital": "Hagåtña",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 168783,
+    "area": 549
+  },
+  {
+    "name": "Guatemala",
+    "capital": "Guatemala City",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 16858333,
+    "area": 108889
+  },
+  {
+    "name": "Guernsey",
+    "capital": "St. Peter Port",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 62999,
+    "area": 78
+  },
+  {
+    "name": "Guinea",
+    "capital": "Conakry",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 13132792,
+    "area": 245857
+  },
+  {
+    "name": "Guinea-Bissau",
+    "capital": "Bissau",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 1967998,
+    "area": 36125
+  },
+  {
+    "name": "Guyana",
+    "capital": "Georgetown",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 786559,
+    "area": 214969
+  },
+  {
+    "name": "Haiti",
+    "capital": "Port-au-Prince",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 11402533,
+    "area": 27750
+  },
+  {
+    "name": "Vatican City",
+    "capital": "Vatican City",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 451,
+    "area": 0.44
+  },
+  {
+    "name": "Honduras",
+    "capital": "Tegucigalpa",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 9904608,
+    "area": 112492
+  },
+  {
+    "name": "Hungary",
+    "capital": "Budapest",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 9749763,
+    "area": 93028
+  },
+  {
+    "name": "Hong Kong",
+    "capital": "City of Victoria",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 7481800,
+    "area": 1104
+  },
+  {
+    "name": "Iceland",
+    "capital": "Reykjavík",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 366425,
+    "area": 103000
+  },
+  {
+    "name": "India",
+    "capital": "New Delhi",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 1380004385,
+    "area": 3287590
+  },
+  {
+    "name": "Indonesia",
+    "capital": "Jakarta",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 273523621,
+    "area": 1904569
+  },
+  {
+    "name": "Ivory Coast",
+    "capital": "Yamoussoukro",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 26378275,
+    "area": 322463
+  },
+  {
+    "name": "Iran (Islamic Republic of)",
+    "capital": "Tehran",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 83992953,
+    "area": 1648195
+  },
+  {
+    "name": "Iraq",
+    "capital": "Baghdad",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 40222503,
+    "area": 438317
+  },
+  {
+    "name": "Ireland",
+    "capital": "Dublin",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 4994724,
+    "area": 70273
+  },
+  {
+    "name": "Isle of Man",
+    "capital": "Douglas",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 85032,
+    "area": 572
+  },
+  {
+    "name": "Israel",
+    "capital": "Jerusalem",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 9216900,
+    "area": 20770
+  },
+  {
+    "name": "Italy",
+    "capital": "Rome",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 59554023,
+    "area": 301336
+  },
+  {
+    "name": "Jamaica",
+    "capital": "Kingston",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 2961161,
+    "area": 10991
+  },
+  {
+    "name": "Japan",
+    "capital": "Tokyo",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 125836021,
+    "area": 377930
+  },
+  {
+    "name": "Jersey",
+    "capital": "Saint Helier",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 100800,
+    "area": 116
+  },
+  {
+    "name": "Jordan",
+    "capital": "Amman",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 10203140,
+    "area": 89342
+  },
+  {
+    "name": "Kazakhstan",
+    "capital": "Nur-Sultan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 18754440,
+    "area": 2724900
+  }
+]

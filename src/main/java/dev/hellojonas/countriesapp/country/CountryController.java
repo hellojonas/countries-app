@@ -1,17 +1,13 @@
 package dev.hellojonas.countriesapp.country;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.CollectionModel;
+import org.springframework.data.domain.Page;
+import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
 @RequestMapping("api/v1/countries")
@@ -19,10 +15,14 @@ public class CountryController {
     private final CountryService countryService;
     private final CountryModelAssembler assembler;
 
+    private final PagedResourcesAssembler<Country> pagedResourcesAssembler;
+
     @Autowired
-    CountryController(CountryService countryService, CountryModelAssembler assembler) {
+    CountryController(CountryService countryService, CountryModelAssembler assembler,
+                      PagedResourcesAssembler<Country> pagedResourcesAssembler) {
         this.countryService = countryService;
         this.assembler = assembler;
+        this.pagedResourcesAssembler = pagedResourcesAssembler;
     }
 
     @PostMapping
@@ -34,17 +34,15 @@ public class CountryController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getCountries() {
-        List<EntityModel<Country>> countries = countryService
-                .getCountries()
-                .stream()
-                .map(assembler::toModel)
-                .collect(Collectors.toList());
+    public ResponseEntity<?> getCountries(
+            @RequestParam(required = false) Integer page,
+            @RequestParam(required = false) Integer size,
+            @RequestParam(required = false) String sortBy,
+            @RequestParam(required = false) String order) {
 
-        CollectionModel<EntityModel<Country>> collectionModel =
-                CollectionModel.of(countries, linkTo(methodOn(CountryController.class).getCountries()).withSelfRel());
-
-        return ResponseEntity.ok(collectionModel);
+        Page<Country> countries = countryService.getCountries(page, size, sortBy, order);
+        PagedModel<EntityModel<Country>> pagedCountries = pagedResourcesAssembler.toModel(countries);
+        return ResponseEntity.ok(pagedCountries);
     }
 
     @GetMapping("/{id}")

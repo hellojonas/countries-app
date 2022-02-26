@@ -224,13 +224,6 @@
     "area": 640679
   },
   {
-    "name": "French Guiana",
-    "capital": "Cayenne",
-    "region": "Americas",
-    "subregion": "South America",
-    "population": 254541
-  },
-  {
     "name": "French Polynesia",
     "capital": "Papeetē",
     "region": "Oceania",
@@ -317,13 +310,6 @@
     "subregion": "Caribbean",
     "population": 112519,
     "area": 344
-  },
-  {
-    "name": "Guadeloupe",
-    "capital": "Basse-Terre",
-    "region": "Americas",
-    "subregion": "Caribbean",
-    "population": 400132
   },
   {
     "name": "Guam",

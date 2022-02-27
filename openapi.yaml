@@ -1,0 +1,272 @@
+openapi: 3.0.3
+
+info:
+  title: Countries API
+  description: API to manage countries related information.
+  version: 0.1.0
+
+servers:
+  - url: https://countries-app-2.herokuapp.com/api/v1
+    description: Heroku server
+    
+paths:
+  /countries:
+    get:
+      tags: [Country]
+      summary: Get all countries
+      parameters:
+        - name: page
+          in: query
+          description: Select the resource page number. Page starts from 0
+          schema:
+            type: integer
+            example: 1
+        - name: size
+          in: query
+          description: Set te size of the each page. Default size is 100 records
+          schema:
+            type: integer
+            example: 25
+        - name: sortBy
+          in: query
+          description: 
+            Set the resource field to sort by
+            must be one of (name, captial, area, population, region, subregion
+            and id)
+          schema:
+            type: string
+            example: name
+        - name: order
+          in: query
+          description: 
+            Set the direction (either "asc" or "desc") to order the results. 
+            The default direction is "asc" and sortyBy must be set in order 
+            to sort results.
+          schema:
+            type: string
+            example: asc
+          
+      responses:
+        "200": 
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _embedded:
+                    type: object
+                    properties:
+                      countryList:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Country"
+                  _links:
+                    type: object
+                    properties:
+                      first:
+                        $ref: "#/components/schemas/Link"
+                      prev:
+                        $ref: "#/components/schemas/Link"
+                      self:
+                        $ref: "#/components/schemas/Link"
+                      next:
+                        $ref: "#/components/schemas/Link"
+                      last:
+                        $ref: "#/components/schemas/Link"
+                  page:
+                    type: object
+                    properties:
+                      size:
+                        type: integer
+                        example: 25
+                      totalElements:
+                        type: integer
+                        example: 65
+                      totalPages:
+                        type: integer
+                        example: 3
+                      number:
+                        type: integer
+                        example: 1
+        "400":
+          $ref: "#/components/responses/400"
+    post:
+      tags: [Country]
+      summary: Create a new country
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: "#/components/schemas/Country"
+              required:
+                - name
+                - capital
+                - area
+                - population
+                - region
+                - subregion
+      responses:
+        "201":
+          description: Created
+          content:
+            applicatioin/json:
+              schema:
+                $ref: "#/components/schemas/Country"
+        "400":
+          $ref: "#/components/responses/400"
+    
+  /countries/{id}:
+    get:
+      tags: [Country]
+      summary: Get country based on its ID
+      parameters:
+        - name: id
+          in: path
+          description: ID of the country
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        "200": 
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Country"
+        "400":
+          $ref: "#/components/responses/400"
+    patch:
+      tags: [Country]
+      summary: Update country data
+      parameters:
+        - name: id
+          in: path
+          description: ID of the country
+          schema:
+            type: integer
+            example: 1
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Country"
+      responses:
+        "200":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Country"
+        "400":
+          $ref: "#/components/responses/400"
+    delete:
+      tags: [Country]
+      summary: Delete a country based on its ID
+      parameters:
+        - name: id
+          in: path
+          description: ID of the country
+          schema:
+            type: integer
+            example: 1
+          required: true
+      responses:
+        "204":
+          description: No Content
+        "400":
+          $ref: "#/components/responses/400"
+  
+  /countries/name/{name}:
+    get:
+      tags: [Country]
+      summary: Find country based on its name
+      parameters:
+        - name: name
+          in: path
+          required: true
+          description: Name of the country
+          schema:
+            type: string
+            example: Mozambique
+          
+      responses:
+        "200": 
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  $ref: "#/components/schemas/Country"
+        "400":
+          $ref: "#/components/responses/400"
+
+components:
+  schemas:
+    Country:
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID of the country
+          readOnly: true
+          example: 1
+        name:
+          type: string
+          description: Name of the country
+          example: Mozambique
+        capital:
+          type: string
+          description: Name of the country capital
+          example: Maputo
+        area:
+          type: number
+          description: Total area of the country
+          example: 801590
+        population:
+          type: integer
+          description: Total number of habitants
+          example: 31255435
+        region:
+          type: string
+          description: Region wich the country belong to
+          example: Africa
+        subregion:
+          type: string
+          description: Subregion wich the country belong to
+          example: Southeastern Africa
+    
+    Link:
+      type: object
+      properties:
+        href:
+          type: string
+          description: Link to the first to the page specified in the key
+        
+  responses:
+    "400":
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+    "404":
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: Country with id '1' was not found
+          
+          
+          

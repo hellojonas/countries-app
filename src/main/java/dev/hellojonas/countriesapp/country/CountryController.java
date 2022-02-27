@@ -38,10 +38,10 @@ public class CountryController {
 
     @GetMapping
     public ResponseEntity<?> getCountries(
-            @RequestParam(required = false) Integer page,
-            @RequestParam(required = false) Integer size,
+            @RequestParam(required = false, defaultValue = "0") Integer page,
+            @RequestParam(required = false, defaultValue = "100") Integer size,
             @RequestParam(required = false) String sortBy,
-            @RequestParam(required = false) String order) {
+            @RequestParam(required = false, defaultValue = "asc") String order) {
 
         Page<Country> countries = countryService.getCountries(page, size, sortBy, order);
         PagedModel<EntityModel<Country>> pagedCountries = pagedResourcesAssembler.toModel(countries);

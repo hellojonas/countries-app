@@ -32,7 +32,7 @@ Use these keys (page, size, sortBy and order) to control paging and sorting on t
 GET https://countries-app-2.herokuapp.com/api/v1/countries?page=4&sise=10&sortBy=area&order=desc
 ```
 
-For details about available action check the [documentation](http://https://countries-app-2.herokuapp.com);
+For details about available action check the [documentation](https://countries-app-2.herokuapp.com);
 
 ## Running locally
 

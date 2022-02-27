@@ -6,13 +6,13 @@ info:
   version: 0.1.0
 
 servers:
-  - url: https://countries-app-2.herokuapp.com/api/v1
+  - url: https://countries-app-2.herokuapp.com
     description: Heroku server
-    
+
 paths:
-  /countries:
+  /api/v1/countries:
     get:
-      tags: [Country]
+      tags: [ Country ]
       summary: Get all countries
       parameters:
         - name: page
@@ -29,7 +29,7 @@ paths:
             example: 25
         - name: sortBy
           in: query
-          description: 
+          description:
             Set the resource field to sort by
             must be one of (name, captial, area, population, region, subregion
             and id)
@@ -38,16 +38,16 @@ paths:
             example: name
         - name: order
           in: query
-          description: 
-            Set the direction (either "asc" or "desc") to order the results. 
-            The default direction is "asc" and sortyBy must be set in order 
+          description:
+            Set the direction (either "asc" or "desc") to order the results.
+            The default direction is "asc" and sortyBy must be set in order
             to sort results.
           schema:
             type: string
             example: asc
-          
+
       responses:
-        "200": 
+        "200":
           description: Ok
           content:
             application/json:
@@ -92,7 +92,7 @@ paths:
         "400":
           $ref: "#/components/responses/400"
     post:
-      tags: [Country]
+      tags: [ Country ]
       summary: Create a new country
       requestBody:
         content:
@@ -116,10 +116,10 @@ paths:
                 $ref: "#/components/schemas/Country"
         "400":
           $ref: "#/components/responses/400"
-    
-  /countries/{id}:
+
+  /api/v1/countries/{id}:
     get:
-      tags: [Country]
+      tags: [ Country ]
       summary: Get country based on its ID
       parameters:
         - name: id
@@ -130,7 +130,7 @@ paths:
             type: integer
             example: 1
       responses:
-        "200": 
+        "200":
           description: Ok
           content:
             application/json:
@@ -139,7 +139,7 @@ paths:
         "400":
           $ref: "#/components/responses/400"
     patch:
-      tags: [Country]
+      tags: [ Country ]
       summary: Update country data
       parameters:
         - name: id
@@ -164,7 +164,7 @@ paths:
         "400":
           $ref: "#/components/responses/400"
     delete:
-      tags: [Country]
+      tags: [ Country ]
       summary: Delete a country based on its ID
       parameters:
         - name: id
@@ -180,9 +180,9 @@ paths:
         "400":
           $ref: "#/components/responses/400"
   
-  /countries/name/{name}:
+  /api/v1/countries/name/{name}:
     get:
-      tags: [Country]
+      tags: [ Country ]
       summary: Find country based on its name
       parameters:
         - name: name
@@ -192,15 +192,15 @@ paths:
           schema:
             type: string
             example: Mozambique
-          
+
       responses:
-        "200": 
+        "200":
           description: Ok
           content:
             application/json:
               schema:
                 type: array
-                items: 
+                items:
                   $ref: "#/components/schemas/Country"
         "400":
           $ref: "#/components/responses/400"
@@ -246,7 +246,7 @@ components:
         href:
           type: string
           description: Link to the first to the page specified in the key
-        
+
   responses:
     "400":
       description: Bad Request
@@ -267,6 +267,3 @@ components:
               message:
                 type: string
                 example: Country with id '1' was not found
-          
-          
-          

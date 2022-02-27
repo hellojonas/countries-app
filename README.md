@@ -15,13 +15,14 @@ API to manage countries related information built in java using Spring Boot.
 
 ## How to access the API
 
-Use the URL **https://countries-app-2.herokuapp.com/api/v1** to access
-all supported resources endpoints.
+Follow the [documentation](https://countries-app-2.herokuapp.com) to access all supported resource endpoints. The API is
+hosted on Heroku with the host location ***https://countries-app-2.herokuapp.com***.
 
-All country related action are mapped to **/countries**. For example to get all countries send the following request:
+All country related action are mapped to **/api/v1/countries**. For example to get all countries send a GET request to
+the following endpoint:
 
 ```
-GET https://countries-app-2.herokuapp.com/api/v1/countries
+https://countries-app-2.herokuapp.com/api/v1/countries
 ```
 
 ### Paging snd sorting support

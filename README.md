@@ -42,8 +42,15 @@ This project depends on java version 17. To run locally clone this repository
 git clone git@github.com:hellojonas/countries-app.git
 ```
 
+Install postgres and add following lines to application.properties:
+
+- spring.datasource.url=jdbc:postgresql://localhost:5432/{database-name}
+- spring.datasource.username={postgres-username}
+- spring.datasource.password={postgres-user-password}
+
 Then navigate to countries-app and start the server, by default it listens on port 8080
 
 ```bash
+cd countries-app
 ./mvnw spring-boot:run
 ```

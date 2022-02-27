@@ -15,7 +15,7 @@ API to manage countries related information built in java using Spring Boot.
 
 ## How to access the API
 
-Use the URL [**https://countries-app-2.herokuapp.com/api/v1**](https://countries-app-2.herokuapp.com/ap1/v1) to access
+Use the URL **https://countries-app-2.herokuapp.com/api/v1** to access
 all supported resources endpoints.
 
 All country related action are mapped to **/countries**. For example to get all countries send the following request:

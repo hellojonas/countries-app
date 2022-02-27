@@ -10,6 +10,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,7 +23,7 @@ public class CountryService {
     }
 
     public Country createCountry(Country country) {
-        Optional<Country> countryFound = countryRepository.findByName(country.getName());
+        Optional<Country> countryFound = countryRepository.findCountryByName(country.getName());
 
         if (countryFound.isPresent()) {
             throw new DuplicatedCountryException(country.getName());
@@ -47,14 +48,8 @@ public class CountryService {
         return countryFound.get();
     }
 
-    public Country getCountyByName(String name) {
-        Optional<Country> countryFound = countryRepository.findByName(name);
-
-        if (countryFound.isEmpty()) {
-            throw new CountryNotFoundException(name);
-        }
-
-        return countryFound.get();
+    public List<Country> getCountyByName(String name) {
+        return countryRepository.findByNameContainingIgnoreCase(name);
     }
 
     public Boolean deleteCountry(Long id) {
@@ -88,7 +83,6 @@ public class CountryService {
             pageable = PageRequest.of(_page, _limit, sort);
         }
 
-//        return countryRepository.findAll(pageable).stream().collect(Collectors.toList());
         return countryRepository.findAll(pageable);
 
     }

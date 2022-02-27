@@ -3,11 +3,14 @@ package dev.hellojonas.countriesapp.country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("api/v1/countries")
@@ -52,9 +55,15 @@ public class CountryController {
     }
 
     @GetMapping("/name/{name}")
-    public ResponseEntity<EntityModel<Country>> getCountryByName(@PathVariable String name) {
-        EntityModel<Country> entityModel = assembler.toModel(countryService.getCountyByName(name));
-        return ResponseEntity.ok(entityModel);
+    public ResponseEntity<?> getCountryByName(@PathVariable String name) {
+//        EntityModel<Country> entityModel = assembler.toModel(countryService.getCountyByName(name));
+        CollectionModel<EntityModel<Country>> collectionModel = CollectionModel.of(
+                countryService
+                        .getCountyByName(name)
+                        .stream()
+                        .map(assembler::toModel)
+                        .collect(Collectors.toList()));
+        return ResponseEntity.ok(collectionModel);
     }
 
     @PatchMapping("/{id}")

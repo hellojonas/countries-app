@@ -14,7 +14,11 @@
     <name>countries-app</name>
     <description>API to manage countries information</description>
     <properties>
+<<<<<<< HEAD
         <java.version>11</java.version>
+=======
+        <java.version>1.8</java.version>
+>>>>>>> fc77f38 (added readme file)
     </properties>
     <dependencies>
         <dependency>

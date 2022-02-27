@@ -139,7 +139,7 @@ paths:
         "400":
           $ref: "#/components/responses/400"
         "404":
-          $ref: "#/components/responses/400"
+          $ref: "#/components/responses/404"
     patch:
       tags: [ Country ]
       summary: Update country data
@@ -166,7 +166,7 @@ paths:
         "400":
           $ref: "#/components/responses/400"
         "404":
-          $ref: "#/components/responses/400"
+          $ref: "#/components/responses/404"
     delete:
       tags: [ Country ]
       summary: Delete a country based on its ID
@@ -184,7 +184,7 @@ paths:
         "400":
           $ref: "#/components/responses/400"
         "404":
-          $ref: "#/components/responses/400"
+          $ref: "#/components/responses/404"
   
   /api/v1/countries/name/{name}:
     get:

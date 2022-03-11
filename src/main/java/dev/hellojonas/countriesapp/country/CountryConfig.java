@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 public class CountryConfig {
 
     @Bean
+    @Profile("dev")
     public CommandLineRunner commandLineRunner(CountryRepository repository) throws FileNotFoundException {
 
         BufferedReader br = new BufferedReader(

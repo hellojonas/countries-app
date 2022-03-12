@@ -6,8 +6,10 @@ info:
   version: 0.1.0
 
 servers:
-  - url: https://countries-app-2.herokuapp.com
-    description: Heroku server
+  - url: https://countries-app-dev.herokuapp.com
+    description: Heroku development server
+  - url: https://countries-app-prod.herokuapp.com
+    description: Heroku production server
 
 paths:
   /api/v1/countries:

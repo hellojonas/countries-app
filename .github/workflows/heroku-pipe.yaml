@@ -5,10 +5,7 @@ on:
     types:
       - closed
     branches:
-      - master
-  push:
-    branches:
-      - review
+      - main
 
 jobs:
   build:

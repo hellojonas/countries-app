@@ -1,6 +1,6 @@
 # Countries App
 
-API to manage countries related information built in java using Spring Boot
+API to manage countries related information built in java using Spring Boot.
 
 ## Features
 

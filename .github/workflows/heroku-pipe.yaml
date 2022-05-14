@@ -4,15 +4,15 @@ on:
   pull_request_target:
     types:
       - closed
-    branches:
-      - master
-  push:
-    branches:
-      - main
+  #   branches:
+  #     - master
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
   deploytoheroku:
-    # if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3

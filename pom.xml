@@ -11,7 +11,7 @@
   <artifactId>countries-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>countries-app</name>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <description>API to manage countries information</description>
 
   <properties>
@@ -19,6 +19,12 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      <version>2.6.5</version>
+    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>

@@ -48,7 +48,7 @@ git clone git@github.com:hellojonas/countries-app.git
 
 Install postgres and add set the environment variables:
 
-- DB_URL: the url to the database, example: jdbc:postgres://[host]:[port]/[database_name]
+- DB_URL: the url to the database, example: jdbc:postgresql://[host]:[port]/[database_name]
 - DB_USER: the database user
 - DB_PASSWORD: password for the user
 

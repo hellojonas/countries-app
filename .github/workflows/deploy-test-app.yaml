@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: review 
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           # heroku_api_key: 97fc02ef-4ab3-4cb9-8512-06850f6eb339

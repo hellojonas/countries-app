@@ -1,15 +1,12 @@
-name: Deploy to Heroku Production
+name: Deploy for review
 
 on:
-  pull_request_target:
-    types:
-      - closed
+  push:
     branches:
-      - main
+      - review
 
 jobs:
   deploytoheroku:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3

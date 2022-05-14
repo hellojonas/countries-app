@@ -4,14 +4,14 @@ on:
   pull_request_target:
     types:
       - closed
-    branches:
-      - master
-  push:
-    branches:
-      - review
+  #   branches:
+  #     - master
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
-  build:
+  deploytoheroku:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-20.04
     steps:

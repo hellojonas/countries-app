@@ -15,6 +15,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           # heroku_api_key: 97fc02ef-4ab3-4cb9-8512-06850f6eb339
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "my-rest-countries"
           heroku_email: "hellojonashp@gmail.com"

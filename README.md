@@ -4,7 +4,7 @@ API to manage countries related information built in java using Spring Boot.
 
 ## Features
 
-- **HAL support**, easy documentation discovery during development
+- **HAL support**, easy documentation discovery during development and production
 - Paging and sorting
 
 ## Technologies

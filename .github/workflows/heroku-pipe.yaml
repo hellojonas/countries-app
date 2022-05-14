@@ -2,10 +2,13 @@ name: Deploy to Heroku
 
 on:
   pull_request_target:
-    branches:
-      - master
     types:
       - closed
+    branches:
+      - master
+  push:
+    branches:
+      - review
 
 jobs:
   build:
